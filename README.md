@@ -413,4 +413,4 @@ What is going on now at `add` is that we first assign to the `todo` variable a n
 `SepCon` also lets us utilize its own "uid generator" by using `SepCon.createUid()`, so that's how we set our `tid` property for each new todo item.
  
  
- 
+ ![SepCon's ToDo List Diagram](/sepcon-todo-list-diag.jpg)
