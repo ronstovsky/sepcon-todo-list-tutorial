@@ -412,6 +412,4 @@ SepCon.createModifier({id: MOD_TODOS}, {
 What is going on now at `add` is that we first assign to the `todo` variable a new object, that is an extension of an object with `tid` and `status` initiated values. If overriding values will come from the `'add-todo'` `component` - they will take over (e.g. if the add-todo could also set an initial status). 
 `SepCon` also lets us utilize its own "uid generator" by using `SepCon.createUid()`, so that's how we set our `tid` property for each new todo item.
  
- <p align="center">
- ![SepCon's ToDo List Diagram](/sepcon-todo-list-diag.jpg)
- </p>
+![SepCon's ToDo List Diagram](/sepcon-todo-list-diag.jpg)
