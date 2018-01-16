@@ -1,0 +1,52 @@
+@import 'variables';
+
+.todo-input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    font-size: 1.5em;
+    padding: 2rem 3rem;
+
+    .type {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 0;
+
+        input {
+            flex-grow: 1;
+            font-size: inherit;
+            border: none;
+            background: none;
+            outline: none;
+            border-bottom: solid 0.3rem $inProgressBgColor;
+            padding: 0.4rem 0.2rem;
+            margin-left: 3rem;
+            display: block;
+            transition: all 0.3s;
+
+            &:focus {
+                border-bottom-color: $doneBgColor;
+            }
+        }
+    }
+
+    button {
+        font-size: inherit;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 0.5rem 2rem;
+        background-color: $inProgressBgColor;
+        transition: all 0.3s;
+
+        &:focus,
+        &:hover {
+            background-color: $doneBgColor;
+        }
+    }
+}

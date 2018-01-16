@@ -1,0 +1,102 @@
+@import 'variables';
+
+ul.todo-list {
+    padding: 1rem;
+    list-style: none;
+
+    li {
+        position: relative;
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+        display: table;
+        width: 100%;
+        color: #333;
+        background-color: $todoBgColor;
+        border-bottom: solid 1rem $todoBgColor;
+
+        transition: all 0.5s;
+
+        &.to-do {
+            border-bottom-color: $bodyBgColor;
+        }
+
+        &.in-progress {
+            border-bottom-color: $inProgressBgColor;
+        }
+
+        &.done {
+            border-bottom-color: $doneBgColor;
+            .todo-title {
+                text-decoration: line-through;
+            }
+        }
+
+
+        .todo-item {
+            min-width: 60vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .todo-remove {
+
+                button {
+                    background-color: transparent;
+                    cursor: pointer;
+                    border: none;
+                    font-size: 2rem;
+                    color: $removeTextColor;
+                    opacity: 0.8;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        transform: scale(1.2);
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .todo-title {
+                font-size: 1.5em;
+            }
+
+            .status-option {
+                display: flex;
+                align-items: center;
+                padding: 0.5rem 3rem;
+                cursor: pointer;
+
+                .label {
+                    padding: 0 1rem;
+                }
+                .icon {
+                    opacity: 0.5;
+                    transition: all 0.2s;
+                }
+                &:hover {
+                    .icon {
+                        transform: scale(1.2);
+                        opacity: 1;
+                    }
+                }
+
+                &.selected {
+                    .icon {
+                        opacity: 1;
+                    }
+                }
+
+                &.to-do {
+                }
+                &.in-progress {
+                    background-color: $inProgressBgColor;
+                    color: $inProgressTextColor;
+                }
+                &.done {
+                    background-color: $doneBgColor;
+                    color: $doneTextColor;
+                }
+            }
+        }
+    }
+}
